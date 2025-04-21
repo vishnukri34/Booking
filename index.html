@@ -164,6 +164,22 @@
       <form x-show="method === 'card'" class="space-y-4">
         <input type="email" placeholder="Email address" class="w-full p-3 border rounded-lg" required />
         <input type="text" placeholder="Full name" class="w-full p-3 border rounded-lg" required />
+
+        <select class="w-full p-3 border rounded-lg">
+          <option disabled selected>Select your event</option>
+          <option>Birthday</option>
+          <option>Marriage</option>
+          <option>Seminar</option>
+          <option>Reception</option>
+          <option>Workshop</option>
+
+
+        </select>
+
+      <!-- Card Payment Form -->
+      <form x-show="method === 'card'" class="space-y-4">
+        <input type="email" placeholder="Email address" class="w-full p-3 border rounded-lg" required />
+        <input type="text" placeholder="Full name" class="w-full p-3 border rounded-lg" required />
         <input type="text" placeholder="Card number" class="w-full p-3 border rounded-lg" />
         <div class="flex gap-3">
           <input type="text" placeholder="MM / YY" class="w-1/2 p-3 border rounded-lg" />
@@ -196,6 +212,17 @@
       <div x-show="method === 'paypal'" class="space-y-4">
         <input type="email" placeholder="Email address" class="w-full p-3 border rounded-lg" />
         <input type="text" placeholder="Full name" class="w-full p-3 border rounded-lg" />
+
+        <select class="w-full p-3 border rounded-lg">
+          <option disabled selected>Select your event</option>
+          <option>Birthday</option>
+          <option>Marriage</option>
+          <option>Seminar</option>
+          <option>Reception</option>
+          <option>Workshop</option>
+
+
+        </select>
         <select class="w-full p-3 border rounded-lg">
           <option>India</option>
           <option>United States</option>
