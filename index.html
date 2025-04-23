@@ -12,32 +12,9 @@
 </head>
 <body class="bg-black text-white">
 
-
-  <nav class="bg-black p-3 flex justify-between items-center sticky top-0 z-50">
-    <h1 class="text-orange-400 fs-5">LUXORA</h1>
-        <ul class="flex justify-between space-x-4">
-            <li class="   rounded px-2 py-2 text-orange-400 no-underline hover:text-white transition">
-              <a href="./home.html" >Home</a>
-            </li>
-        
-            <li class=" rounded px-4 py-2 ">
-              <a href="#"  >Booking</a>
-            </li>
-            <li class="border bg-yellow-400 rounded px-4 py-2 bg-yellow-400 ">
-                <a href="#" class="text-black" >Login</a>
-              </li>
-              <li class="border border-yellow-500 rounded px-4 py-2 ">
-                <a href="./register.html" >Register</a>
-              </li>
-            <li class=" rounded px-4 py-2">
-              <a href="./contact.html" >Contact</a>
-            </li>
-          </ul>
-          
-          <style>
-            *{
+  <style>
+    *{
         font-family: "Orelega One", serif;
-        
 
       }
       
@@ -62,17 +39,40 @@
             position: sticky;
             top: 0;
         }
-        nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
+  </style>
 
 
-
-          </style>
-          
-    </nav>
+  <nav class="bg-black p-3 flex justify-between items-center sticky top-0 z-50" x-data="{ open: false }">
+    <h1 class="text-orange-400 text-lg">LUXORA</h1>
+  
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex justify-between space-x-4">
+      <li><a href="./home.html" class="px-2 py-2 hover:text-white">Home</a></li>
+      <li><a href="#" class="px-4 py-2">Booking</a></li>
+      <li><a href="#" class="bg-yellow-400 text-black px-4 py-2 rounded">Login</a></li>
+      <li><a href="./register.html" class="border border-yellow-500 px-4 py-2 rounded">Register</a></li>
+      <li><a href="./contact.html" class="px-4 py-2">Contact</a></li>
+    </ul>
+  
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden">
+      <button @click="open = !open" class="text-orange-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Dropdown Menu -->
+    <ul x-show="open" x-transition class="absolute top-16 right-4 bg-black border border-yellow-500 rounded-lg shadow-md p-4 space-y-2 md:hidden">
+      <li><a href="./home.html" class="block hover:text-white">Home</a></li>
+      <li><a href="#" class="block hover:text-white">Booking</a></li>
+      <li><a href="#" class="block bg-yellow-400 text-black rounded px-2 py-1">Login</a></li>
+      <li><a href="./register.html" class="block border border-yellow-500 rounded px-2 py-1">Register</a></li>
+      <li><a href="./contact.html" class="block hover:text-white">Contact</a></li>
+    </ul>
+  </nav>
+  
 
   <div class="min-h-screen flex flex-col md:flex-row items-start justify-center p-8 gap-10">
     
